@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "kubernetescluster1-a083"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "kubernetescluster1-a083"
+    spec:
+      containers:
+        - name: "kubernetescluster1-a083"
+          image: "dockercontainerregistryapp1.azurecr.io/kubernetescluster1"
+          ports:
+          - containerPort: 80
